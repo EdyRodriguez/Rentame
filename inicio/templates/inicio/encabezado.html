@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}  {% endblock %}</title>
+    {%load static%}
+    <script src="https://kit.fontawesome.com/9061f523a2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="{% static 'inicio/css/styles.css' %}" rel="stylesheet" />
+    
+    <script src="{% static 'inicio/js/script.js' %}"></script>
+</head>
+<body>
+  <div class=" bgnav">
+    <div class="container mx-auto">
+      <nav class="navbar navbar-expand-lg  text-uppercase" id="mainNav">
+            
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"></a>
+            <div class="user-menu dropdown"> 
+                <a class="navbar-brand" href="#"> <img src="{% static 'inicio/images/logo.png' %}" alt="logo" width="130" height="130">
+                </a>    
+                </div>
+            <button class="navbar-toggler text-uppercase bgcard  text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded lead footer-text fw-bolder" href="{%url 'Admin'%}">Administrador</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded lead footer-text fw-bolder" href="{%url 'Principal'%}">Inicio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded lead footer-text fw-bolder" href="{%url 'Cabañas'%}">Cabañas</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded lead footer-text fw-bolder" href="{%url 'Contactanos'%}">Contáctanos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded lead footer-text fw-bolder" href="{%url 'Nosotros'%}">Nosotros</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded lead footer-text fw-bolder" href="{%url 'Ayuda'%}">Ayuda</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+  </div>
+    {%block encabezado%}
+    
+    {%endblock%}
+    {%block contenido%}
+
+
+    {%endblock%}
+
+    {%block footer%}
+    <footer class=" bgnav " >
+      <div class="container">
+        <div class="row justify-content-between">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-lg-0 text-center mt-2">
+                <h4 class="text-uppercase footer-text fw-bold ">Localizacion</h4>
+                <p class="lead footer-text fw-bolder">
+                    Mi casita!
+                    20 de noviembre 93
+                </p>
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-7 text-center mb-lg-0 mt-2">
+                <h4 class="text-uppercase footer-text fw-bold">Redes</h4>
+                <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-instagram"></i></a>
+                <br>
+            </div>
+            <!-- Footer About Text-->
+            
+        </div>
+        
+    </div>
+    <p class="footer-text fs-5 fw-bold text-center p-2">Todos los derechos reservados S.A, de C.V</p>
+    </footer>
+    {%endblock%}
+</body>
+</html>

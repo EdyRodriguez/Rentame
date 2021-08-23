@@ -1,0 +1,47 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} Nosotros {%endblock%}
+
+{%block contenido%}
+<div class="container">
+  <div class="text-center mt-3">
+
+    {%load static%}
+    <img class="image-fluid" src="{% static 'inicio/images/quienes_somos4.jpg' %}" alt="Quienes Somos" width="1300" height="600">
+
+  </div>
+
+  <div class=" mt-5">
+    <h1 class="text-center text-decoration-underline fw-bold textocolor">¿Quiénes Somos?</h1>
+    <div class="card text-justify bgnav mb-5 mt-5">
+      <p class="footer-text fs-5 mt-3 ms-4 me-3">
+        Somos emprendedores que vivos la oportunidad en la renta de espacios inmobiliarios
+        (cabañas), en nuestro país se puede aprovechar esta oportunidad gracias a sus paisajes, áreas naturales
+        y hermosas playas, es por eso que decidimos crear nuestra propia empresa
+        y así lograr independizarnos de nuestras familias y entrar en el ámbito laboral.
+        Algo  que nos caracteriza es que siempre tratamos con nuestros clientes de manera personalizada,
+        ya que sabemos lo importante que es para ellos el sentirse seguros y poder confiar en nosotros.
+      
+        Por eso somos especialistas en el negocio de renta de espacios inmobiliarios, tenemos experiencia
+        en renta y atención al cliente.
+      
+        Contamos con cabañasque pueden satisfacer todos los gustos y preferencias de los clientes.
+      </p>
+      <h3 class="ms-3 footer-text">Estas son algunas empresas con las que hemos trabajado:</h3>
+
+      <div class="container row mt-5 mb-5">
+        <div class="col-4">
+          <img class="img-fluid rounded mx-auto d-block" src="{% static 'inicio/images/trivago.png' %}" alt="Trivago">
+        </div>
+        <div class="col-4">
+          <img class=" img-fluid rounded mx-auto d-block" src="{% static 'inicio/images/airbnb.png' %}" alt="Airbnb">
+        </div>
+        <div class="col-4">
+          <img class=" img-fluid rounded mx-auto d-block" src="{% static 'inicio/images/tripadvisor.png' %}"
+            alt="tripadvisor">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

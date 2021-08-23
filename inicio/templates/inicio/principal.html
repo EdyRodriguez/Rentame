@@ -1,0 +1,53 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} Principal {%endblock%}
+
+
+{%block contenido%}
+
+
+<div class="container">
+
+    <div class="container text-center mt-3">
+
+        {%load static%}
+        <img class="image-fluid" src="{% static 'inicio/images/quienes_somos.jpg' %}" alt="Quienes Somos" width="1300"
+            height="600">
+
+    </div>
+    <div class="container row mt-5 mb-5">
+        <div class="row g-2">
+            <div class="container row col-8">
+            <div class="col-6">
+              <div class="p-3  text-center "><img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
+            </div>
+            <div class="col-6">
+              <div class="p-3"><h3 class="textocolor">Titulo</h3>
+                <p class="fs-5 textocolor">Este deberia de ser un texto de una hermosa cabaña ubicada en las costas de playa azul michoacan pero no tengo mas imagenes descargadas  y tengo weva de buscar</p>
+            </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 "><img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 "><h3 class="textocolor">Titulo</h3>
+                <p class="fs-5 textocolor">Este deberia de ser un texto de una hermosa cabaña ubicada en las costas de playa azul michoacan pero no tengo mas imagenes descargadas  y tengo weva de buscar</p>
+           </div>
+            </div>
+        </div>
+        <div class="card col-xl-4 col-lg-4  col-sm-12 text-center bgcard" >
+            <h3 class="footer-text">Promo</h3>
+            <img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/quienes_somos.jpg' %}" alt="Quienes Somos">
+            <p class="fs-5 footer-text fs-5">soy un texto descriptivo</p>
+        </div>
+          </div>
+           
+        
+        
+            
+        
+    </div>
+
+</div>
+</div>
+{%endblock%}

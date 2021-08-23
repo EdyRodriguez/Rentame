@@ -1,0 +1,22 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} Catalogo {%endblock%}
+
+{%block contenido%}
+
+<div class="mt-5 mb-5 ">
+    
+    <h2 class="text-center text-decoration-underline fw-bold textocolor">Administrador</h2>
+    <div class="container row mt-5 " style="margin:0 auto">
+        <h1>Lista de cabañas</h1>
+        <ul>
+            {% for cabain in cabain %}
+                <li>{{ cabain.title }}</li>
+            {%endfor%}
+        </ul>
+    </div>
+    
+
+</div>
+
+{%endblock%}

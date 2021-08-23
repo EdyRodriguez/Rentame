@@ -1,0 +1,90 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} Ayuda {%endblock%}
+
+{%block contenido%}
+
+
+<div class="mt-5 ">
+    
+        <h2 class="text-center text-decoration-underline fw-bold textocolor">Ayuda</h2>
+        <div class="container row mt-5 " style="margin:0 auto">
+            <form class="card p-5 shadow mb-2  rounded " style="background-color: #EEEEEE;">
+                <div class="container">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="mt-3">
+                                <div class="form-group">
+                                    <label class="form-label footer-text fs-5" for="inputEmail4">Nombre completo</label>
+                                    <input type="text" class="form-control " id="name"
+                                        placeholder="Escribe tu nombre completo" required>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-group">
+                                    <label class="mt-2 form-label footer-text fs-5" for="inputPassword4">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="Escribe correo electrónico" required>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="form-group ">
+                                    <label class="mt-2 form-label footer-text fs-5" for="inputAddress">Teléfono</label>
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="Coloca tu número a 10 digitos" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="p-2 form-label footer-text fs-5" for="inputCity">Mensaje</label>
+                                <textarea class="form-control" name="mensaje" type="text" id="mensaje" cols="30"
+                                    rows="4" placeholder="¿Qué información deseas solicitar?" style="height: 242px;"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end p-3 form-label ">
+                            <button type="submit" class="btn mt-4 text-light" style="background-color: #334257;">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container mt-4">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-lg-6 col-sm-12 text-center">
+                    <h3 class="textocolor">Preguntas frecuentes</h3>
+                    <h4 class="textocolor">¿Cómo puedo realizar una reserva?</h4>
+                    <p class="fs-5 textocolor">Para realizar una reserva, es necesario que se ponga contacto
+                        con la persona que publicó la cabaña en renta, en el cuadro
+                        de la cabaña se encontrará la información del contacto.
+                    </p>
+        
+                    <h4 class="textocolor">¿Cómo puedo anunciar mi cabaña en su página?</h4>
+                    <p class="fs-5 textocolor">
+                        Es necesario ponerse en contacto con soporte técnico y
+                        nosotros nos comunicaremos con usted a la brevedad.
+                    </p>
+        
+                    <h4 class="textocolor">¿Qué tipo de pago aceptan?</h4>
+                    <p class="fs-5 textocolor">
+                        Si la persona que renta la cabaña es de su localidad,
+                        es posible el pago en efectivo, de lo contrario, se
+                        aceptará el pago a través de depósitos a la o las
+                        cuentas bancarias del dueño.
+                    </p>
+                </div>
+                
+                <div class="col-xl-4 col-lg-6  col-sm-12 text-center ">
+                    <h3 class="textocolor p-4 ">¡Promoción!</h3>
+                    {%load static%}
+                    <img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/nosotros.jpg' %}" alt="IMAGEN" >
+                    <p class="p-4 fs-5 textocolor"> ¡Visita Lazaro Cardenas Michoacán con este paquete que tenemos preparado para ti y tus amigos!</p>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+{%endblock%}

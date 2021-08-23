@@ -1,0 +1,32 @@
+.textocolor{
+    color: #EEEEEE;
+    
+}
+.footer-text{
+    color: #334257;
+    
+}
+body{
+    background-color: #334257;
+}
+.bgnav{
+    background-color: #EEEEEE;
+
+}
+footer{
+    position: absolute;
+    width: 100%;
+    padding-bottom: 0px;
+}
+.bgcard{
+ background-color: #EEEEEE;
+ border: 1px solid;
+ border-color: #334257;
+ align-content: space-around;
+}
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
