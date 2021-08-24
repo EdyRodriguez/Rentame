@@ -12,8 +12,9 @@ def administrador(request):
     cabain = Cabains.objects.all()
     return render(request,'inicio/administrador.html',{'cabain':cabain})
 
-def cabañas(request):
-    return render(request,"inicio/cabañas.html")
+def cabañas(request,id):
+    cabain = Cabains.objects.get(id=id)
+    return render(request,"inicio/cabañas.html",{'cabain': cabain})
 
 def contacto(request):
     return render(request,"inicio/contacto.html")

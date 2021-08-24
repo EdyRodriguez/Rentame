@@ -11,7 +11,7 @@
         
         
             {% for cabain in cabain %}
-            <div class="card p-3 shadow rounded text-center" style="width: 18rem; margin-left:2vh; background-color: #EEEEEE;">
+            <div class="card p-3 mb-3 shadow rounded text-center" style="width: 18rem; margin-left:2vh; background-color: #EEEEEE;">
                 <img class="card-img-top img-thumbnail" src="{{cabain.image.url}}" alt="" width="300" height="300">
                 <div class="card-body">
                   <h5 class="card-title footer-text fs-4">{{ cabain.title }}</h5>
@@ -35,7 +35,7 @@
                     <li class="list-group-item footer-text fs-7" style="background-color: #EEEEEE;">Baños: {{cabain.bathrooms}}</li>
                   </ul>                
                   
-                  <a href="#" class="btn text-light" style="background-color: #334257;">Washar</a>
+                  <a href="{%url 'Cabañas' cabain.id%}" class="btn text-light" style="background-color: #334257;">Washar</a>
                 </div>
             </div>
                 

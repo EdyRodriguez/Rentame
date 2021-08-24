@@ -4,37 +4,64 @@
 
 {%block contenido%}
 <div class="mt-5 ">
-<h2 class="text-center text-decoration-underline fw-bold textocolor">Cabaña</h2>
+
 <div class="container mt-5">
-    <div class="row mt-5">
-        <div class="col-6">
+  <div class="card p-5 shadow mb-2  rounded" style="background-color:  #EEEEEE;">
+    <blockquote class="blockquote text-right">
+        <p class="blockquote-footer text-right fw-bold">Publicado: {{cabain.created}}</p>
+      </blockquote>
+    <h2 class="text-center text-decoration-underline fw-bold footer-text">Reserva</h2>
+    <div class="row mt-5 mb-5">
+        <div class="col-6 mt-5">
             <div class="row">
                 {%load static%}
-                <div class="p-3  text-center "><img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
+                <div class="  text-center "><img class="rounded shadow img-fluid mx-auto d-block" src="{{cabain.image.url}}" alt="" width="700" height="700"></div>
             </div>
             
         </div>
-        <div class="col-6 text-center">
-            <h1 class="mb-5 textocolor">Altitude Luxury</h1>
-            <button type="button" class="btn bgnav footer-text " disabled>Lujo</button>
-            <button type="button" class="btn bgnav footer-text " disabled>2 baños</button>
-            <button type="button" class="btn bgnav footer-text " disabled>Wifi 5G</button>
-            <button type="button" class="btn bgnav footer-text " disabled>4 cuartos</button>
-            <p class="mt-5 textocolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, necessitatibus. Architecto ex ut qui, atque modi perspiciatis, ea eveniet inventore consequuntur soluta illum? Officiis ratione nihil numquam minima, obcaecati quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui laboriosam, saepe quibusdam laborum dicta cumque quidem ad. In tenetur, numquam laborum, explicabo est ipsam quaerat nesciunt sunt veritatis magni corporis.</p>
+        <div class="col-6 mt-5 footer-text text-center">
+            <h1 class="  fs-1 fw-bold mb-2">{{cabain.title}}</h1>
+            <h4 class="mt fw-bold ">Ubicacion: {{cabain.ubication}}</h4>
+            <h5 class=" fw-bold ">Costo: {{cabain.cost}}       </h5>
+            <button type="button" class="btn bgnav text-light fw-bold" style="background-color: #334257;" disabled>{% if cabain.bathrooms < '2' %}
+                 {{cabain.bathrooms}} baño
+                {% else %}
+                {{cabain.bathrooms}} baños
+            {% endif %}
+            </button>
+            {% if cabain.wifi %}
+            <button type="button" class="btn bgnav text-light fw-bold" style="background-color: #334257;" disabled>Wifi 5G</button>
+            {% endif %}
+            {% if cabain.pool %}
+            <button type="button" class="btn bgnav text-light fw-bold" style="background-color: #334257;" disabled>Piscina</button>
+            {% endif %}
+            {% if cabain.garage %}
+            <button type="button" class="btn bgnav text-light fw-bold" style="background-color: #334257;" disabled>Garage</button>
+            {% endif %}
+            
+            <button type="button" class="btn bgnav text-light fw-bold" style="background-color: #334257;" disabled>{% if cabain.rooms < '2' %}
+                {{cabain.rooms}} cuarto
+               {% else %}
+               {{cabain.rooms}} cuartos
+               {% endif %}
+            </button>
+            
+            <p class="mt-5 footer-text fw-bold">{{cabain.description}}</p>
+            
         </div>
-        <br>
+        
     
     </div>
     
+    
+  </div>
+  
 </div>
 <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
     
 </div>
 {%endblock%}
