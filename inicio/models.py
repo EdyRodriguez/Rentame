@@ -22,6 +22,7 @@ class Cabains(models.Model):
     wifi=models.BooleanField()
     garage=models.BooleanField()
     pool=models.BooleanField()
+    oferta=models.BooleanField(default=False)
     bathrooms=models.CharField(max_length=1, choices=bathrooms_choice)
     rooms=models.CharField(max_length=1, choices=rooms_choice)
     description=models.TextField()

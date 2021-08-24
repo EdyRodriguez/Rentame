@@ -6,7 +6,9 @@ from django.contrib import admin
 # Create your views here.
 
 def principal(request):
-    return render(request,"inicio/principal.html")
+    cabain = Cabains.objects.filter(oferta=True)
+    count =False;
+    return render(request,"inicio/principal.html",{'cabain':cabain,'count':count})
 
 def administrador(request):
     cabain = Cabains.objects.all()
