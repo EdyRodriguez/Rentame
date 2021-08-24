@@ -8,65 +8,80 @@
 
 <div class="container">
 
-    <div class="container text-center mt-3">
+  <div class="container text-center mt-3">
 
-        {%load static%}
-        
-              
-              <img class="image-fluid mt-5" src="{% static 'inicio/images/quienes_somos.jpg' %}" alt="Quienes Somos" width="1300"
-        height="600">
-            
+    {%load static%}
 
-    </div>
-    <div class="container row mt-5 mb-3">
-        <div class="row g-2">
-            <div class="container row col-8">
-            <div class="col-6">
-              <div class="p-3  text-center "><img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
-            </div>
-            <div class="col-6">
-              <div class="p-3"><h3 class="textocolor">Titulo</h3>
-                <p class="fs-5 textocolor">Este deberia de ser un texto de una hermosa cabaña ubicada en las costas de playa azul michoacan pero no tengo mas imagenes descargadas  y tengo weva de buscar</p>
-            </div>
-            </div>
-            <div class="col-6">
-              <div class="p-3 "><img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
-            </div>
-            <div class="col-6">
-              <div class="p-3 "><h3 class="textocolor">Titulo</h3>
-                <p class="fs-5 textocolor">Este deberia de ser un texto de una hermosa cabaña ubicada en las costas de playa azul michoacan pero no tengo mas imagenes descargadas  y tengo weva de buscar</p>
-           </div>
-            </div>
+
+    <img class="image-fluid mt-5" src="{% static 'inicio/images/cabaña 1.jpg' %}" alt="Quienes Somos" width="1300"
+      height="600">
+
+
+  </div>
+  <div class="container row mt-5 mb-3">
+    <div class="row g-2">
+      <div class="container row col-8">
+        <div class="col-6">
+          <div class="p-3  text-center "><img class="rounded img-fluid mx-auto d-block"
+              src="{% static 'inicio/images/cabaña 3.jpg' %}" alt="Quienes Somos"></div>
         </div>
-        <div class="card col-xl-4 col-lg-4  col-sm-12 text-center bgcard" >
-            <h3 class="footer-text">Promo</h3>
-            <img class="rounded img-fluid mx-auto d-block" src="{% static 'inicio/images/quienes_somos.jpg' %}" alt="Quienes Somos">
-            <p class="fs-5 footer-text fs-5">soy un texto descriptivo</p>
-        </div>
+        <div class="col-6">
+          <div class="p-3">
+            <h3 class="textocolor">Villa Porto Ixtapa</h3>
+            <p class="fs-5 textocolor">Nuestra Villa se encuentra dentro de uno de los condominios más exclusivos de la
+              zona "Porto Ixtapa" . Descubrirás una villa estilo mediterráneo con sala, comedor y cocina abiertos a la
+              terraza con vista a la bahía de Ixtapa.</p>
           </div>
-           
-        
-        
-            
-        
+        </div>
+        <div class="col-6">
+          <div class="p-3 "><img class="rounded img-fluid mx-auto d-block"
+              src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 ">
+            <h3 class="textocolor">Beach House Scape</h3>
+            <p class="fs-5 textocolor">Luxurious house in front of the private beach, perfect to enjoy the wonderful
+              climate of Ixtapa accompanied by some freshly caught oysters and spend a quiet afternoon in the pool
+              surrounded by fruit trees, palm trees and nature.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4  col-sm-12 text-center">
+        <div class="">
+          <div class="p-3 "><img class="rounded img-fluid mx-auto d-block"
+              src="{% static 'inicio/images/cabaña 2.jpg' %}" alt="Quienes Somos"></div>
+        </div>
+        <div class="">
+          <div class="p-3 ">
+            <h3 class="textocolor">Casa del Sol</h3>
+            <p class="fs-5 textocolor">Departamento ubicado en albatros Residencial,es un condominio que se caracteriza
+              por su buena ubicación y una de las albercas más grandes de ixtapa ,ambiente familiar y seguro ,cuenta con
+              2 jacuzzis y un chapoteadero ,con caseta de vigilancia y seguridad 24/7 para que pase unas vacaciones
+              excepciónales.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <h2 class="text-center text-decoration-underline mb-2 fw-bold textocolor">Ofertas</h2>
-    <div class="scrollmenu text-center   " style="width: 102%; background-color: #334257; display: inline-block; overflow: auto;
-    white-space: nowrap;" >
-     
+  </div>
+
+  <h2 class="text-center text-decoration-underline mb-2 fw-bold textocolor">Ofertas</h2>
+  <div class="container text-center mt-3">
+    <div class="scrollmenu text-center   " style="width: 100%; background-color: #334257;margin-left:2vh;margin-right:2vh; display: inline-block; overflow: auto;
+    white-space: nowrap;">
+
       {% for cabain in cabain %}
-      <a href="{%url 'Cabañas' cabain.id%}" >
+      {%if cabain.oferta%}
+      <a href="{%url 'Cabañas' cabain.id%}">
         <div class="card mb-2" style="width: 11rem; margin-left:2vh; background-color: #EEEEEE; display: inline-block;">
           <img class="p-1" src="{{cabain.image.url}}" alt="" height="100rem" width="150rem">
-          <p>{{cabain.title}}</p>
+          <p class="footer-text">{{cabain.title}}</p>
         </div>
       </a>
-            
-           
-      
-      {%endfor%}
-    
-    </div>
-</div>
 
+      {%endif%}
+
+      {%endfor%}
+    </div>
+  </div>
+</div>
 {%endblock%}

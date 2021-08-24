@@ -1,12 +1,13 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Cabains
 from django.contrib import admin
+
 # Create your views here.
 
 # Create your views here.
 
 def principal(request):
-    cabain = Cabains.objects.filter(oferta=True)
+    cabain = Cabains.objects.all()
     count =False;
     return render(request,"inicio/principal.html",{'cabain':cabain,'count':count})
 
@@ -26,6 +27,5 @@ def nosotros(request):
 
 def ayuda(request):
     return render(request,"inicio/ayuda.html")
-
 
 
