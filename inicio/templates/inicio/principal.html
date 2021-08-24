@@ -5,25 +5,26 @@
 
 {%block contenido%}
 
+<div class="container text-center mt-3">
 
+  {%load static%}
+
+
+  <img class="rounded " src="{% static 'inicio/images/cabaña 1.jpg' %}" alt="Quienes Somos" style="width: 100%;
+  height: auto;"     >
+
+
+</div>
 <div class="container">
 
-  <div class="container text-center mt-3">
-
-    {%load static%}
-
-
-    <img class="image-fluid mt-5" src="{% static 'inicio/images/cabaña 1.jpg' %}" alt="Quienes Somos" width="1300"
-      height="600">
-
-
-  </div>
+  
   <div class="container row mt-5 mb-3">
     <div class="row g-2">
-      <div class="container row col-8">
+      <div class="container row col-xl-8 col-lg-12 col-sm-12">
         <div class="col-6">
           <div class="p-3  text-center "><img class="rounded img-fluid mx-auto d-block"
-              src="{% static 'inicio/images/cabaña 3.jpg' %}" alt="Quienes Somos"></div>
+              src="{% static 'inicio/images/cabaña 3.jpg' %}" alt="Quienes Somos" style="width: 100%;
+              height: auto;"></div>
         </div>
         <div class="col-6">
           <div class="p-3">
@@ -35,7 +36,8 @@
         </div>
         <div class="col-6">
           <div class="p-3 "><img class="rounded img-fluid mx-auto d-block"
-              src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos"></div>
+              src="{% static 'inicio/images/nosotros.jpg' %}" alt="Quienes Somos" style="width: 100%;
+              height: auto;"></div>
         </div>
         <div class="col-6">
           <div class="p-3 ">
@@ -46,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-4 col-lg-4  col-sm-12 text-center">
+      <div class="col-xl-4 col-lg-12  col-sm-12 text-center">
         <div class="">
           <div class="p-3 "><img class="rounded img-fluid mx-auto d-block"
               src="{% static 'inicio/images/cabaña 2.jpg' %}" alt="Quienes Somos"></div>
