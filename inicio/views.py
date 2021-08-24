@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models import Cabains
+from django.contrib import admin
 # Create your views here.
 
 # Create your views here.
@@ -22,4 +23,6 @@ def nosotros(request):
 
 def ayuda(request):
     return render(request,"inicio/ayuda.html")
+
+
 

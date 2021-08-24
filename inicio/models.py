@@ -25,11 +25,14 @@ class Cabains(models.Model):
     bathrooms=models.CharField(max_length=1, choices=bathrooms_choice)
     rooms=models.CharField(max_length=1, choices=rooms_choice)
     description=models.TextField()
-    image=models.ImageField()
+    image = models.ImageField(null=True,upload_to="fotos",verbose_name="Fotografía")
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now=True)
 
-    
+    class Meta:
+        verbose_name= 'Cabaña'
+        verbose_name_plural= 'Cabañas'
+        ordering=["-created"]
 
     def __str__(self):
         return self.title

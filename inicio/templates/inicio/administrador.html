@@ -6,14 +6,42 @@
 
 <div class="mt-5 mb-5 ">
     
-    <h2 class="text-center text-decoration-underline fw-bold textocolor">Administrador</h2>
+    <h2 class="text-center text-decoration-underline fw-bold textocolor">Catalogo</h2>
     <div class="container row mt-5 " style="margin:0 auto">
-        <h1>Lista de cabañas</h1>
-        <ul>
+        
+        
             {% for cabain in cabain %}
-                <li>{{ cabain.title }}</li>
+            <div class="card p-3 shadow rounded text-center" style="width: 18rem; margin-left:2vh; background-color: #EEEEEE;">
+                <img class="card-img-top img-thumbnail" src="{{cabain.image.url}}" alt="" width="300" height="300">
+                <div class="card-body">
+                  <h5 class="card-title footer-text fs-4">{{ cabain.title }}</h5>
+                  <h6 class="card-title footer-text fs-5">Ubicacion: {{ cabain.ubication }}</h6>
+                  <ul class="list-group list-group-flush " >
+                    <li class="list-group-item footer-text fs-7" style="background-color: #EEEEEE;">Costo: {{cabain.cost}} mxn Wifi: {% if cabain.wifi %}
+                        Si 
+                    {% else %}
+                        No 
+                    {% endif %}</li>
+                    <li class="list-group-item footer-text fs-7" style="background-color: #EEEEEE;">Piscina: {% if cabain.pool %}
+                        Si 
+                    {% else %}
+                        No 
+                    {% endif %} Garage: {% if cabain.garage %}
+                        Si 
+                    {% else %}
+                        No 
+                    {% endif %}</li>
+                    <li class="list-group-item footer-text fs-7" style="background-color: #EEEEEE;">Numero de cuartos: {{cabain.rooms}} </li>
+                    <li class="list-group-item footer-text fs-7" style="background-color: #EEEEEE;">Baños: {{cabain.bathrooms}}</li>
+                  </ul>                
+                  
+                  <a href="#" class="btn text-light" style="background-color: #334257;">Washar</a>
+                </div>
+            </div>
+                
+                
             {%endfor%}
-        </ul>
+            
     </div>
     
 
