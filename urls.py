@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio import views
+from django.urls.conf import include
 from django.conf import settings 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('jet /', include ('jet.urls')),
     path('',views.principal, name="Principal"),
     path('administrador/',views.administrador,name="Admin"),
     path('cabañas/',views.cabañas,name="Cabañas"),
